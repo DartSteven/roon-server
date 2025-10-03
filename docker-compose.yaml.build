@@ -1,0 +1,26 @@
+services:
+  roon-server:
+    container_name: Roon-Server
+    build:
+      context: .
+      args:
+    hostname: roon
+    network_mode: host
+    labels:
+      - "com.centurylinklabs.watchtower.enable=true"
+    environment:
+#      - ROON_VERSION:"EarlyAccess"
+      - PUID=1000
+      - PGID=1000
+      - TZ:"Europe/Rome"
+    volumes:
+      - ./Roon/roon/data:/var/roon
+      - ./Roon/roon/server:/opt/RoonServer
+      - ./Backup/Roon-Backup:/backup
+      - /Musica:/music:ro
+      - /run/udev:/run/udev:ro
+      - /etc/localtime:/etc/localtime:ro
+    devices:
+      - /dev/bus/usb:/dev/bus/usb
+      - /dev/snd:/dev/snd
+      - /dev/net/tun:/dev/net/tun
