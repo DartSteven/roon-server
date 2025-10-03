@@ -32,6 +32,6 @@ It is designed to be minimal, stable, and easy to use in a containerized environ
 ### Build the image
 
 ```bash
-git clone https://github.com/<your-username>/roon-server-docker.git
+git clone https://github.com/DartSteven/roon-server.git
 cd roon-server-docker
 docker build -t roon-server .
