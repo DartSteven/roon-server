@@ -7,7 +7,7 @@ services:
     hostname: roon
     network_mode: host
     environment:
-      ROON_VERSION: "EarlyAccess"
+      ROON_VERSION: "earlyaccess"
       PUID: "1000"
       PGID: "1000"
       TZ: "Europe/Rome"
