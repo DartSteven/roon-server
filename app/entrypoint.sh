@@ -13,7 +13,7 @@ if [ -n "${ROON_PACKAGE_URI}" ]; then
   echo "Using explicit ROON_PACKAGE_URI=${ROON_PACKAGE_URI}"
 else
   if [ "${ROON_VERSION_CLEAN}" = "earlyaccess" ]; then
-    ROON_PACKAGE_URI="https://download.roonlabs.net/builds/earlyaccess/RoonServer_linuxx64.tar.bz2"
+    ROON_PACKAGE_URI="https://download.roonlabs.net/updates/earlyaccess/RoonServer_linuxx64.tar.bz2"
     echo "Selected EarlyAccess branch"
   else
     ROON_PACKAGE_URI="http://download.roonlabs.com/builds/RoonServer_linuxx64.tar.bz2"
